@@ -1,0 +1,14 @@
+---
+- name: Mostras Logs
+  hosts: mikrotik
+  gather_facts: false
+
+  tasks:
+    - name: Rodar comando no mikrotik
+      community.routeros.command:
+        commands: /log print
+      register: mostrar_log
+
+    - name: Mostrar Log
+      ansible.builtin.debug:
+        msg: "{{ mostrar_log.stdout_lines }}"

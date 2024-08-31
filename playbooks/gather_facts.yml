@@ -1,0 +1,13 @@
+---
+- name: Coletar configuracao do Mikrotik
+  hosts: mikrotik
+  gather_facts: false
+
+  tasks:
+    - name: Coletar todas as informacoes do Mikrotik
+      community.routeros.facts:
+        gather_subset: all
+
+    - name: Mostrar informacoes coletadas
+      ansible.builtin.debug:
+        var: ansible_facts

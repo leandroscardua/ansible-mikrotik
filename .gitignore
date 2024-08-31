@@ -1,0 +1,5 @@
+settings.json
+*.log
+*.retry
+*vault_pass*
+.fact_cache

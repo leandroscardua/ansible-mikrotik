@@ -1,0 +1,11 @@
+all:
+  children:
+    mikrotik:
+      hosts:
+        mikrotik.home:
+      vars:
+          ansible_host: 
+          ansible_user: 
+          ansible_ssh_pass: 
+          ansible_network_os: routeros
+          ansible_connection: network_cli
